@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const footerLinks = {
   Soluções: [
@@ -50,20 +51,23 @@ const socials = [
 ];
 
 const Footer = () => {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="section-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
           {/* Brand */}
           <div>
-            <a href="#" className="inline-block mb-4">
+            <Link to="/" className="inline-block mb-4">
               <img
                 src="/logo-black.png"
                 alt="IOY Soluções em Software"
                 className="h-9 w-auto object-contain"
                 style={{ filter: 'brightness(0) invert(1)' }}
               />
-            </a>
+            </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Sistemas completos para negócios locais. Do atendimento ao financeiro, organizamos tudo para você crescer com estrutura.
             </p>
@@ -112,7 +116,7 @@ const Footer = () => {
                 {links.map((link) => (
                   <li key={link.label}>
                     <a
-                      href={link.href}
+                      href={link.href.startsWith('http') || link.href.startsWith('/') ? link.href : (isHome ? link.href : `/${link.href}`)}
                       className="text-gray-400 hover:text-indigo-400 text-sm transition-colors"
                     >
                       {link.label}

@@ -12,6 +12,8 @@ const navLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -31,13 +33,13 @@ const Navbar = () => {
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="#" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <img
                 src="/logo-black.png"
                 alt="IOY Soluções em Software"
                 className="h-9 w-auto object-contain"
               />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop menu */}
@@ -45,7 +47,7 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <a
                 key={link.label}
-                href={link.href}
+                href={isHome ? link.href : `/${link.href}`}
                 className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all duration-200"
               >
                 {link.label}
@@ -83,7 +85,7 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <a
               key={link.label}
-              href={link.href}
+              href={isHome ? link.href : `/${link.href}`}
               className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition"
               onClick={() => setIsOpen(false)}
             >

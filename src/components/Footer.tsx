@@ -12,6 +12,11 @@ const footerLinks = {
     { label: "Modelo de Contratação", href: "#contratacao" },
     { label: "Fale Conosco", href: "https://wa.me/5527988625801?text=Oi%2C%20quero%20entender%20como%20automatizar%20meu%20neg%C3%B3cio%20e%20vender%20mais" },
   ],
+  Legal: [
+    { label: "Termos de Uso", href: "/termos-de-uso" },
+    { label: "Política de Privacidade", href: "/politica-de-privacidade" },
+    { label: "Política de Cookies", href: "/politica-de-cookies" },
+  ],
 };
 
 const socials = [

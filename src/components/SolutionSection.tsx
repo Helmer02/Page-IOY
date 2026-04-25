@@ -20,7 +20,7 @@ const SolutionSection = () => {
             <div className="absolute -inset-4 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-3xl -z-10" />
             <div className="relative bg-white rounded-2xl border border-gray-100 shadow-xl overflow-hidden">
               <img
-                src="/saasland/sessão.png"
+                src="/sessão.png"
                 alt="Painel de controle IOY"
                 className="w-full object-cover"
               />

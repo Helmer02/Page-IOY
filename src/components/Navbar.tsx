@@ -33,7 +33,7 @@ const Navbar = () => {
           <div className="flex-shrink-0 flex items-center">
             <a href="#" className="flex items-center">
               <img
-                src="/saasland/logo-black.png"
+                src="/logo-black.png"
                 alt="IOY Soluções em Software"
                 className="h-9 w-auto object-contain"
               />

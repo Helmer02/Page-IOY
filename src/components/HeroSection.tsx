@@ -3,32 +3,32 @@ import { ArrowRight, CheckCircle2, MessageCircle, ChevronLeft, ChevronRight } fr
 
 const carouselSlides = [
   {
-    src: '/saasland/loja.png',
+    src: '/loja.png',
     alt: 'Vitrine Online',
     label: 'Vitrine Online',
   },
   {
-    src: '/saasland/produtoloja.png',
+    src: '/produtoloja.png',
     alt: 'Página de Produto',
     label: 'Página de Produto',
   },
   {
-    src: '/saasland/produtos.png',
+    src: '/produtos.png',
     alt: 'Gestão de Produtos',
     label: 'Gestão de Produtos',
   },
   {
-    src: '/saasland/financeiro.png',
+    src: '/financeiro.png',
     alt: 'Painel Financeiro',
     label: 'Painel Financeiro',
   },
   {
-    src: '/saasland/checkout.png',
+    src: '/checkout.png',
     alt: 'Checkout',
     label: 'Checkout Inteligente',
   },
   {
-    src: '/saasland/relatorio.png',
+    src: '/relatorio.png',
     alt: 'Relatórios de Vendas',
     label: 'Relatórios de Vendas',
   },

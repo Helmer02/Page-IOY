@@ -53,7 +53,7 @@ const Footer = () => {
           <div>
             <a href="#" className="inline-block mb-4">
               <img
-                src="/saasland/logo-black.png"
+                src="/logo-black.png"
                 alt="IOY Soluções em Software"
                 className="h-9 w-auto object-contain"
                 style={{ filter: 'brightness(0) invert(1)' }}

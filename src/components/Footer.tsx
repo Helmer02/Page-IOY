@@ -10,7 +10,7 @@ const footerLinks = {
   Empresa: [
     { label: "Como Funciona", href: "#como-funciona" },
     { label: "Modelo de Contratação", href: "#contratacao" },
-    { label: "Fale Conosco", href: "https://wa.me/5500000000000" },
+    { label: "Fale Conosco", href: "https://wa.me/5527988625801?text=Oi%2C%20quero%20entender%20como%20automatizar%20meu%20neg%C3%B3cio%20e%20vender%20mais" },
   ],
 };
 
@@ -63,7 +63,7 @@ const Footer = () => {
               Sistemas completos para negócios locais. Do atendimento ao financeiro, organizamos tudo para você crescer com estrutura.
             </p>
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/5527988625801?text=Oi%2C%20quero%20entender%20como%20automatizar%20meu%20neg%C3%B3cio%20e%20vender%20mais"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-sm font-semibold py-2.5 px-5 rounded-xl transition-all shadow"

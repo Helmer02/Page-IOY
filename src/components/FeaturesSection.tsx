@@ -64,7 +64,7 @@ const solutions = [
     subtitle: 'Controle de pedidos e entregas em um único painel.',
     description:
       'Em desenvolvimento. Vai integrar pedidos online com a gestão de entregas, permitindo acompanhar cada pedido em rota e organizar todo o fluxo de delivery do seu negócio.',
-    link: 'https://wa.me/5500000000000',
+    link: 'https://wa.me/5527988625801?text=Oi%2C%20quero%20entender%20como%20automatizar%20meu%20neg%C3%B3cio%20e%20vender%20mais',
     features: [
       'Pedidos online integrados',
       'Controle de entregas por status',

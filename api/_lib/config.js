@@ -160,7 +160,7 @@ function localSaveConfig(config) {
 
 async function loadConfig() {
   if (IS_VERCEL && (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY)) {
-    throw new Error("SUPABASE_URL e SUPABASE_SERVICE_ROLE_KEY não configurados na Vercel.");
+    return normalizeConfig(DEFAULT_CONFIG);
   }
   if (SUPABASE_URL && SUPABASE_SERVICE_ROLE_KEY) {
     try {

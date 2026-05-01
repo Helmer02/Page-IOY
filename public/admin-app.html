@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="manifest" href="/admin.webmanifest" />
+  <title>Painel Admin | IOY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f8faff;--surface:#fff;--line:#e2e8f0;--text:#0f172a;--muted:#475569;--brand:#4f46e5;--brand-2:#7c3aed;--radius:14px;--shadow:0 10px 34px rgba(99,102,241,.12)}*{box-sizing:border-box}
+    body{margin:0;font-family:"Inter",sans-serif;color:var(--text);background:linear-gradient(135deg,#eff6ff 0%,#f5f3ff 50%,#fdf2f8 100%)}
+    .wrap{max-width:980px;margin:0 auto;padding:20px 12px 96px}.topbar,.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+    .topbar{padding:16px 18px;margin-bottom:12px;background:linear-gradient(90deg,#4f46e5,#7c3aed);color:#fff;border:0}.topbar .muted{color:#e0e7ff}
+    .card{padding:14px;margin-bottom:12px}h1{margin:0;font-size:21px}h2{margin:0 0 8px;font-size:18px}
+    .muted{color:var(--muted);font-size:13px}label{display:block;font-size:13px;margin:10px 0 6px;font-weight:700}
+    input,textarea,select,button{width:100%;font-size:16px;font-family:inherit;border-radius:10px;border:1px solid var(--line);padding:10px 12px}
+    input:focus,textarea:focus,select:focus{outline:none;border-color:#6366f1;box-shadow:0 0 0 3px rgba(99,102,241,.16)}
+    button{border:0;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;font-weight:700}
+    .btn-ghost{background:#eef2ff;color:#3730a3;border:1px solid #c7d2fe}
+    .row{display:flex;gap:8px;flex-wrap:wrap}.row>*{flex:1}.row .small{flex:0 0 auto;min-width:130px}
+    .grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}.photo-box{border:1px solid var(--line);border-radius:10px;padding:10px;background:#f8faff}
+    .thumb{width:100%;height:130px;object-fit:cover;border:1px solid #cbd5e1;border-radius:10px;margin-top:6px;background:#f1f5f9}
+    .status{margin-top:10px;font-size:13px;font-weight:600}.hidden{display:none}
+    .actions-card{position:fixed;left:10px;right:10px;bottom:10px;background:#fff;z-index:30}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar"><h1>Painel Administrativo IOY</h1><div class="muted">Edite sessoes, imagens, telefone e redes sociais da landing page.</div></div>
+    <div id="loginCard" class="card">
+      <h2>Acesso</h2>
+      <label for="password">Senha</label>
+      <input id="password" type="password" placeholder="Digite a senha" />
+      <button id="loginBtn" style="margin-top:10px;">Entrar</button>
+      <p id="loginStatus" class="status"></p>
+    </div>
+
+    <div id="panel" class="hidden">
+      <div class="card">
+        <h2>Hero Principal</h2>
+        <label>Titulo principal</label><input id="heroTitle" />
+        <label>Subtitulo</label><textarea id="heroSubtitle"></textarea>
+        <label>Imagem principal (URL ou upload)</label><input id="heroBanner" />
+        <input id="heroBannerFile" type="file" accept="image/*" />
+        <img id="heroBannerPreview" class="thumb" alt="Previa da imagem principal" />
+      </div>
+
+      <div class="card">
+        <h2>Carrossel do Hero</h2>
+        <div id="galleryFields" class="grid"></div>
+      </div>
+
+      <div class="card">
+        <h2>Solucoes da IOY</h2>
+        <div class="row">
+          <button id="addSolutionBtn" class="small" type="button">Nova solucao</button>
+          <button id="removeSolutionBtn" class="small btn-ghost" type="button">Remover</button>
+        </div>
+        <label>Solucao selecionada</label><select id="solutionSelect"></select>
+        <label>Nome da solucao</label><input id="solutionName" />
+        <div class="row">
+          <div><label>Tag comercial</label><input id="solutionTag" placeholder="Ex.: Principal, Disponivel, Em breve" /></div>
+          <div><label>Link principal</label><input id="solutionLink" placeholder="https://..." /></div>
+        </div>
+        <label>Descricao</label><textarea id="solutionDescription"></textarea>
+        <label>Imagens da solucao (ate 4)</label>
+        <div id="solutionImagesFields" class="grid"></div>
+      </div>
+
+      <div class="card">
+        <h2>Sessoes da Landing</h2>
+        <div class="row"><div><label>Problema - titulo</label><input id="problemTitle" /></div><div><label>Problema - subtitulo</label><input id="problemSubtitle" /></div></div>
+        <div class="row"><div><label>Solucao - titulo</label><input id="solutionSectionTitle" /></div><div><label>Solucao - subtitulo</label><input id="solutionSectionSubtitle" /></div></div>
+        <div class="row"><div><label>Como funciona - titulo</label><input id="howTitle" /></div><div><label>Como funciona - subtitulo</label><input id="howSubtitle" /></div></div>
+        <div class="row"><div><label>Beneficios - titulo</label><input id="benefitsTitle" /></div><div><label>Beneficios - subtitulo</label><input id="benefitsSubtitle" /></div></div>
+        <div class="row"><div><label>Depoimentos - titulo</label><input id="testimonialsTitle" /></div><div><label>Depoimentos - subtitulo</label><input id="testimonialsSubtitle" /></div></div>
+        <div class="row"><div><label>Planos - titulo</label><input id="pricingTitle" /></div><div><label>Planos - subtitulo</label><input id="pricingSubtitle" /></div></div>
+        <div class="row"><div><label>CTA final - titulo</label><input id="ctaTitle" /></div><div><label>CTA final - subtitulo</label><input id="ctaSubtitle" /></div></div>
+      </div>
+
+      <div class="card">
+        <h2>Contato e Redes Sociais</h2>
+        <div class="row"><div><label>Telefone/WhatsApp</label><input id="contactPhone" placeholder="+55 27 98862-5801" /></div><div><label>Link do WhatsApp</label><input id="contactWhatsapp" placeholder="https://wa.me/..." /></div></div>
+        <div class="row"><div><label>Instagram</label><input id="socialInstagram" placeholder="https://instagram.com/..." /></div><div><label>LinkedIn</label><input id="socialLinkedin" placeholder="https://linkedin.com/..." /></div></div>
+        <div class="row"><div><label>Facebook</label><input id="socialFacebook" placeholder="https://facebook.com/..." /></div><div><label>Email comercial</label><input id="contactEmail" placeholder="contato@..." /></div></div>
+      </div>
+
+      <div class="card actions-card">
+        <div class="row">
+          <button id="saveBtn">Salvar alteracoes</button>
+          <button id="logoutBtn" class="btn-ghost">Sair</button>
+        </div>
+        <p id="saveStatus" class="status"></p>
+      </div>
+    </div>
+  </div>
+  <script src="/admin-app.js"></script>
+</body>
+</html>

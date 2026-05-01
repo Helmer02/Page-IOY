@@ -1,0 +1,66 @@
+﻿{
+  "hero": {
+    "title": "Organize, venda e cresca seu negocio sem complicacao",
+    "subtitle": "Sistemas completos para negocios locais. Do atendimento ao financeiro, tudo no mesmo lugar com implantacao feita junto com voce.",
+    "bannerImage": "/painel.png"
+  },
+  "galleryImages": [
+    { "src": "/loja.png", "alt": "Vitrine Online" },
+    { "src": "/produtoloja.png", "alt": "Pagina de Produto" },
+    { "src": "/produtos.png", "alt": "Gestao de Produtos" },
+    { "src": "/financeiro.png", "alt": "Painel Financeiro" }
+  ],
+  "accommodations": [
+    {
+      "id": "ac-1",
+      "name": "Loja Online",
+      "capacity": 12,
+      "price": "Principal",
+      "images": ["/loja.png", "/produtoloja.png", "/produtos.png", "/financeiro.png"],
+      "airbnbIcalUrl": "https://lojaonline.ioy.com.br/",
+      "manualBusyDates": ["Sistema principal da IOY"]
+    },
+    {
+      "id": "ac-2",
+      "name": "Agendamento",
+      "capacity": 6,
+      "price": "Disponivel",
+      "images": [],
+      "airbnbIcalUrl": "https://agenda.ioy.com.br/",
+      "manualBusyDates": ["Teste gratis de 10 dias"]
+    },
+    {
+      "id": "ac-3",
+      "name": "Delivery",
+      "capacity": 6,
+      "price": "Em breve",
+      "images": [],
+      "airbnbIcalUrl": "https://wa.me/5527988625801?text=Oi%2C%20quero%20entender%20como%20automatizar%20meu%20neg%C3%B3cio%20e%20vender%20mais",
+      "manualBusyDates": ["Em desenvolvimento"]
+    }
+  ],
+  "sections": {
+    "problemTitle": "Seu negocio cresce, mas a operacao trava",
+    "problemSubtitle": "Processos manuais e ferramentas separadas atrasam vendas e atendimento.",
+    "solutionTitle": "As solucoes da IOY",
+    "solutionSubtitle": "Cada sistema e pensado para uma etapa da sua operacao.",
+    "howTitle": "Como funciona",
+    "howSubtitle": "Implantacao guiada, treinamento e suporte continuo.",
+    "benefitsTitle": "Beneficios reais",
+    "benefitsSubtitle": "Mais organizacao, menos retrabalho e mais resultado.",
+    "testimonialsTitle": "Resultados de clientes",
+    "testimonialsSubtitle": "Empresas locais que evoluiram com a IOY.",
+    "pricingTitle": "Modelos de contratacao transparentes",
+    "pricingSubtitle": "Sem letras miudas e sem comissao sobre vendas.",
+    "ctaTitle": "Vamos estruturar seu negocio?",
+    "ctaSubtitle": "Fale com a equipe e descubra a melhor solucao para o seu momento."
+  },
+  "contact": {
+    "phone": "+55 27 98862-5801",
+    "whatsapp": "https://wa.me/5527988625801?text=Oi%2C%20quero%20entender%20como%20automatizar%20meu%20neg%C3%B3cio%20e%20vender%20mais",
+    "instagram": "",
+    "linkedin": "",
+    "facebook": "",
+    "email": ""
+  }
+}

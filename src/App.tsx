@@ -11,6 +11,11 @@ import CookieBanner from "./components/CookieBanner";
 
 const queryClient = new QueryClient();
 
+const AdminRedirect = () => {
+  window.location.replace("/admin.html");
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -18,6 +23,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+          <Route path="/admin" element={<AdminRedirect />} />
+          <Route path="/admin/*" element={<AdminRedirect />} />
           <Route path="/" element={<Index />} />
           <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
           <Route path="/termos-de-uso" element={<TermsOfUse />} />

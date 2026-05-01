@@ -1,0 +1,16 @@
+{
+  "name": "Painel Admin Pousada",
+  "short_name": "Admin Pousada",
+  "start_url": "/admin",
+  "display": "standalone",
+  "background_color": "#eef3ef",
+  "theme_color": "#255f3f",
+  "icons": [
+    {
+      "src": "/admin-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

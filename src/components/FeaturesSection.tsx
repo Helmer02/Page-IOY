@@ -11,9 +11,9 @@ const solutions = [
     tag: 'Principal',
     tagColor: 'bg-indigo-100 text-indigo-700',
     title: 'Sistema de Loja Online',
-    subtitle: 'Venda online e presencialmente no mesmo sistema, de forma integrada.',
+    subtitle: 'Assuma o controle total de vendas, estoque e equipe.',
     description:
-      'Plataforma completa para digitalizar o seu comércio. O cliente acessa, monta o pedido e você só precisa confirmar. Funciona tanto para a loja física quanto para vendas online.',
+      'Uma infraestrutura premium que unifica suas vendas físicas e digitais. Elimine pedidos manuais, profissionalize a experiência de compra do seu cliente e tenha números exatos do seu negócio na palma da mão.',
     link: 'https://lojaonline.ioy.com.br/',
     features: [
       'Loja com link próprio (acesso pelo celular)',
@@ -39,9 +39,9 @@ const solutions = [
     tag: 'Disponível',
     tagColor: 'bg-purple-100 text-purple-700',
     title: 'Sistema de Agendamento',
-    subtitle: 'Organize sua agenda de clientes e elimine conflitos de horário.',
+    subtitle: 'Profissionalize o agendamento e acabe com os furos na agenda.',
     description:
-      'Para negócios que trabalham com hora marcada. O sistema organiza os horários, evita sobreposição de atendimentos e estrutura o seu processo de agendamento pelo WhatsApp.',
+      'Dê um fim aos agendamentos perdidos em conversas intermináveis de WhatsApp. Entregue um link premium para seus clientes marcarem horários sozinhos enquanto você foca em realizar um serviço de excelência.',
     link: 'https://agenda.ioy.com.br/',
     features: [
       'Organização da agenda de clientes',
@@ -84,13 +84,13 @@ const FeaturesSection = () => {
     <section id="solucoes" className="bg-white">
       <div className="section-container section-padding">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="section-label">Soluções</span>
+          <span className="section-label">Ecossistema IOY</span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            As soluções da{' '}
-            <span className="gradient-text">IOY</span>
+            Tecnologia focada em{' '}
+            <span className="gradient-text">Resultados</span>
           </h2>
           <p className="text-lg text-gray-500">
-            Cada sistema é pensado para um tipo de negócio. Escolha o que se encaixa melhor na sua realidade.
+            Cada sistema é projetado para eliminar um gargalo específico da sua operação. Escolha a infraestrutura que o seu negócio precisa hoje.
           </p>
         </div>
 

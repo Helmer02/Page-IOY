@@ -3,34 +3,28 @@ import { ArrowRight, CheckCircle2, MessageCircle, ChevronLeft, ChevronRight } fr
 
 const carouselSlides = [
   {
+    type: 'video',
+    src: '/agendaonline.mp4',
+    alt: 'Sistema de Agendamento',
+    label: 'Sistema de Agendamento',
+  },
+  {
+    type: 'image',
     src: '/loja.png',
     alt: 'Vitrine Online',
-    label: 'Vitrine Online',
+    label: 'Loja Online',
   },
   {
-    src: '/produtoloja.png',
-    alt: 'Página de Produto',
-    label: 'Página de Produto',
+    type: 'image',
+    src: '/Agenda-celular.png',
+    alt: 'Gestão pelo Celular',
+    label: 'Gestão Móvel',
   },
   {
-    src: '/produtos.png',
-    alt: 'Gestão de Produtos',
-    label: 'Gestão de Produtos',
-  },
-  {
-    src: '/financeiro.png',
-    alt: 'Painel Financeiro',
-    label: 'Painel Financeiro',
-  },
-  {
-    src: '/checkout.png',
-    alt: 'Checkout',
-    label: 'Checkout Inteligente',
-  },
-  {
-    src: '/relatorio.png',
-    alt: 'Relatórios de Vendas',
-    label: 'Relatórios de Vendas',
+    type: 'image',
+    src: '/tablet.png',
+    alt: 'Painel de Controle',
+    label: 'Painel Centralizado',
   },
 ];
 
@@ -88,14 +82,13 @@ const HeroSection = () => {
 
           {/* Headline */}
           <h1 className="animate-fade-in text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-6" style={{ animationDelay: '0.1s' }}>
-            Organize, venda e{' '}
-            <span className="gradient-text">cresça seu negócio</span>{' '}
-            sem complicação
+            Transforme o Caos Operacional em{' '}
+            <span className="gradient-text">Crescimento Escalável</span>
           </h1>
 
           {/* Subheadline */}
           <p className="animate-fade-in text-xl md:text-2xl text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed" style={{ animationDelay: '0.2s' }}>
-            Sistemas completos para negócios locais. Do atendimento ao financeiro, tudo no mesmo lugar — com implantação feita junto com você.
+            Sistemas premium projetados para profissionalizar sua gestão, automatizar tarefas manuais e devolver o controle da sua empresa para as suas mãos.
           </p>
 
           {/* CTAs */}
@@ -114,16 +107,16 @@ const HeroSection = () => {
               href="#solucoes"
               className="inline-flex items-center justify-center gap-2 border-2 border-indigo-200 text-indigo-700 hover:bg-indigo-50 font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-200"
             >
-              Conhecer as soluções
+              Descubra Nossas Soluções
             </a>
           </div>
 
           {/* Trust indicators */}
           <div className="animate-fade-in flex flex-wrap justify-center gap-6 text-sm text-gray-500" style={{ animationDelay: '0.4s' }}>
             {[
-              'Implantação feita junto com você',
-              'Suporte contínuo',
-              'Treinamento incluído',
+              'Profissionalização Imediata',
+              'Controle Absoluto',
+              'Design Premium',
             ].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0" />
@@ -159,27 +152,49 @@ const HeroSection = () => {
                 </span>
               </div>
 
-              {/* Slide image */}
+              {/* Slide image / video */}
               <div
                 className="relative w-full overflow-hidden bg-gray-50"
                 style={{ paddingBottom: '56.25%' /* 16:9 ratio */ }}
               >
-                <img
-                  key={current}
-                  src={carouselSlides[current].src}
-                  alt={carouselSlides[current].alt}
-                  style={{
-                    position: 'absolute',
-                    inset: 0,
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    objectPosition: 'top left',
-                    animation: animating
-                      ? `carousel-out-${direction} 0.4s ease forwards`
-                      : `carousel-in-${direction} 0.4s ease forwards`,
-                  }}
-                />
+                {carouselSlides[current].type === 'video' ? (
+                  <video
+                    key={`vid-${current}`}
+                    src={carouselSlides[current].src}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    style={{
+                      position: 'absolute',
+                      inset: 0,
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'top center',
+                      animation: animating
+                        ? `carousel-out-${direction} 0.4s ease forwards`
+                        : `carousel-in-${direction} 0.4s ease forwards`,
+                    }}
+                  />
+                ) : (
+                  <img
+                    key={`img-${current}`}
+                    src={carouselSlides[current].src}
+                    alt={carouselSlides[current].alt}
+                    style={{
+                      position: 'absolute',
+                      inset: 0,
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'top center',
+                      animation: animating
+                        ? `carousel-out-${direction} 0.4s ease forwards`
+                        : `carousel-in-${direction} 0.4s ease forwards`,
+                    }}
+                  />
+                )}
               </div>
 
               {/* Navigation arrows */}

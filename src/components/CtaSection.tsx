@@ -17,11 +17,11 @@ const CtaSection = () => {
             </span>
 
             <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
-              Pronto para organizar seu negócio e vender mais?
+              A profissionalização do seu negócio é uma decisão.
             </h2>
 
             <p className="text-lg text-indigo-100 mb-10 leading-relaxed">
-              Fale com a nossa equipe no WhatsApp. Vamos entender o seu negócio e mostrar qual solução faz mais sentido para você.
+              Fale com nossos especialistas. Vamos avaliar sua operação atual e estruturar o ecossistema ideal para o crescimento da sua empresa.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -38,7 +38,7 @@ const CtaSection = () => {
             </div>
 
             <p className="text-sm text-indigo-200 mt-6">
-              Sem compromisso. Sem plano gratuito. Só clareza sobre o que funciona para o seu negócio.
+              O fim do caos operacional. O começo do seu crescimento seguro e planejado.
             </p>
           </div>
         </div>

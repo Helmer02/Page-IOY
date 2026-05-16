@@ -2,12 +2,12 @@ import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
 
 const benefits = [
-  'Vendas online e presenciais no mesmo sistema',
-  'Pedidos chegam organizados, sem retrabalho',
-  'Visão clara do faturamento e equipe',
-  'Menos tempo respondendo mensagens',
-  'Controle de estoque, produto e variações',
-  'Relatórios de vendas sempre disponíveis',
+  'Ecossistema Expansível (Vendas online e físicas)',
+  'Fim da perda de clientes no WhatsApp',
+  'Gestão inteligente de estoque e variações',
+  'Design premium que inspira confiança',
+  'Processos automatizados sem retrabalho',
+  'Controle absoluto do faturamento e equipe',
 ];
 
 const SolutionSection = () => {
@@ -20,7 +20,7 @@ const SolutionSection = () => {
             <div className="absolute -inset-4 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-3xl -z-10" />
             <div className="relative bg-white rounded-2xl border border-gray-100 shadow-xl overflow-hidden">
               <img
-                src="/sessão.png"
+                src="/tablet.png"
                 alt="Painel de controle IOY"
                 className="w-full object-cover"
               />
@@ -41,14 +41,13 @@ const SolutionSection = () => {
 
           {/* Content */}
           <div className="lg:w-1/2">
-            <span className="section-label">A solução IOY</span>
+            <span className="section-label">Infraestrutura Tecnológica</span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Um sistema que{' '}
-              <span className="gradient-text">centraliza tudo</span>{' '}
-              em um só lugar
+              A profissionalização começa{' '}
+              <span className="gradient-text">na sua operação</span>
             </h2>
             <p className="text-lg text-gray-500 mb-8 leading-relaxed">
-              A IOY reúne vendas, pedidos, atendimento, equipe, relatórios e financeiro em uma única plataforma. Você para de improvisar e começa a operar com estrutura.
+              A IOY substitui a adivinhação por dados exatos e a desordem por processos automatizados. Construímos soluções com design premium e fluxos inteligentes para quem entende que organizar a operação hoje é o único caminho para lucrar amanhã.
             </p>
 
             <div className="space-y-3 mb-10">

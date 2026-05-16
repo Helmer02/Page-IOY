@@ -23,11 +23,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100"
-          : "bg-white"
-      }`}
+      className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
+        ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100"
+        : "bg-white"
+        }`}
     >
       <div className="section-container">
         <div className="flex justify-between h-16 items-center">

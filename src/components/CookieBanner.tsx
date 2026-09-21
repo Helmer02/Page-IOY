@@ -84,7 +84,7 @@ const CookieBanner = () => {
                 <Settings className="w-5 h-5 text-indigo-600" />
                 Gerenciar Preferências de Cookies
               </h3>
-              <button onClick={() => setShowPreferences(false)} className="text-gray-400 hover:text-gray-600">
+              <button aria-label="Fechar preferências" onClick={() => setShowPreferences(false)} className="text-gray-400 hover:text-gray-600">
                 <X className="w-5 h-5" />
               </button>
             </div>
